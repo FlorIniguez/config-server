@@ -8,8 +8,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 //notacion para registar servicio
 @EnableDiscoveryClient
 public class FlightsApiApplication {
+
     public static void main(String[] args) {
+
         SpringApplication.run(FlightsApiApplication.class, args);
+
     }
 
 
