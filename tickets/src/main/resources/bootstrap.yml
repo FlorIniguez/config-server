@@ -2,7 +2,6 @@ spring:
   application:
     name: tickets-service
 
-
   cloud:
     config:
       enabled: true
