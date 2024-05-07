@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 //esto va a llamar a flight api
-@FeignClient(name = "flight-server")
+@FeignClient(name = "flight-service")
 public interface FlightClient {
     //como va a trabajar
 
