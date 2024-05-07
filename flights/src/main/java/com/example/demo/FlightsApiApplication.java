@@ -12,7 +12,6 @@ public class FlightsApiApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(FlightsApiApplication.class, args);
-
     }
 
 

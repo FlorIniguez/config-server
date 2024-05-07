@@ -1,7 +1,7 @@
 #spring.application.name=eureka
 spring:
   application:
-    name:eureka-service
+    name: eureka-service
 
   cloud:
     config:
