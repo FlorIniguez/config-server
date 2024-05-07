@@ -4,7 +4,7 @@ server:
 spring:
 
 flightsApi:
-  url:${URL_FLIGHTS:http://flight-service}
+  url: ${URL_FLIGHTS:http://flight-service}
 
 dolarapi:
   url: ${URL_DOLAR:https://dolarapi.com/v1/dolares/tarjeta}
