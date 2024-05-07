@@ -1,7 +1,7 @@
-spring:
-
 server:
   port: 0
+
+spring:
 
 flightsApi:
   url: ${URL_FLIGHTS:http://flight-service}
