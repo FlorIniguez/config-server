@@ -14,7 +14,7 @@ spring:
     show-sql: true
 
 server:
-  port: 8080
+  port: 0
 
 dolarapi:
   url: ${URL_DOLAR:https://dolarapi.com/v1/dolares/tarjeta}
