@@ -1,5 +1,6 @@
 package com.api.tickets.controller;
 
+import com.api.tickets.model.CompanyDto;
 import com.api.tickets.model.FlightDto;
 import com.api.tickets.model.Ticket;
 import com.api.tickets.service.FlightClient;
@@ -27,6 +28,10 @@ public class TicketController {
     public List<FlightDto> getAllFlights() {
         return flightClient.getAllFlights();
     }
+    @GetMapping("/companies")
+    public List <CompanyDto> getAllCompanies(){
+        return flightClient.getAllCompanies();
+    }
     @GetMapping("/{ticketId}")
     public Optional<Ticket> findTicketById(@PathVariable Long ticketId) {
         return ticketService.findById(ticketId);
@@ -38,6 +43,14 @@ public class TicketController {
     @PostMapping("/add/{flightId}")
     public Optional<Ticket> addTicketController(@PathVariable Long flightId, @RequestBody Ticket ticket) {
         return ticketService.addTicket(flightId,ticket);
+    }
+    @DeleteMapping("/delete/{idTicket}")
+    public void deleteTicket(@PathVariable Long idTicket) {
+        ticketService.deleteTicket(idTicket);
+    }
+    @PutMapping("/update/{idTicket}")
+    public Optional<Ticket> updateTicket(@PathVariable Long idTicket, @RequestBody Ticket updatedTicket) {
+        return ticketService.updateTicket(idTicket, updatedTicket);
     }
 
 }

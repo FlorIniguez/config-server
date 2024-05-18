@@ -20,8 +20,10 @@ public interface FlightClient {
     @GetMapping("/flights/{flightId}")
     FlightDto getFlightById(@PathVariable("flightId") Long flightId);
     //companies
-    @GetMapping("/companies/{id}")
-    CompanyDto getCompanyById(@PathVariable("id") Long id);
+    @GetMapping("/companies")
+    List<CompanyDto>getAllCompanies();
+    @GetMapping("/companies/{companyId}")
+    CompanyDto  searchCompanyId(@PathVariable("companyId") Long id);
 
 
 }

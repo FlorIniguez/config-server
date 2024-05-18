@@ -12,8 +12,7 @@ public class FlightDto {
     private String departureTime;
     private String arrivingTime;
     private double convertedPrice;
-    private Long companyId; // ID de la compañía
-    // Otros campos de la compañía que puedas necesitar
-    private String companyName;
+    private String frequency;
+    private CompanyDto company;
 
 }

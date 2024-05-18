@@ -47,6 +47,21 @@ public class TicketService {
         return Optional.of(addedTicket);
     }
 
+    public void deleteTicket(Long ticketId) {
+        tickets.removeIf(ticket -> ticket.getId() == ticketId);
 
-    //FALTAN DELETE Y UPDATE
+    }
+
+    public Optional<Ticket> updateTicket(Long ticketId, Ticket updatedTicket) {
+        return tickets.stream()
+                .filter(ticket -> ticket.getId().equals(ticketId))
+                .findFirst()
+                .map(ticket -> {
+                    // Actualizar el ticket con los datos de updatedTicket
+                    //cree metodo updateFrom en modelo de ticket
+                    ticket.updateFrom(updatedTicket);
+                    ;
+                    return ticket;
+                });
+    }
 }
